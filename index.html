@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vastumandala</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style>
         body {
+            position: relative;
             background-image: url('./bg.jpg');
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
+        /*.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+            color: black;
+            background-color: #fcd900;
+        }
+    
+            .nav-pills > li.active > a:hover {
+                background-color: #efcb00;
+                color:black;
+            }*/
+            .nav-pills > li > a.active {
+            background-color: #000000!important;
+            color: white!important;
+            }
+            div.col-12 div {
+            height: 500px;
+        }
     </style>
 </head>
-<body>
-        <nav class="navbar navbar-expand-sm text-dark bg-white navbar-expand-md navbar-expand-lg">
+<body data-spy="scroll" data-target="#scrollspy">
+    <div>
+        <nav class="navbar navbar-expand-sm text-dark bg-white navbar-expand-md navbar-expand-lg fixed-top" id="scrollspy">
             
             <div class="container">
                 <a href="./index.html" class="navbar-brand"><div id="logo"><img src="./logo.gif" alt="Logo"></div></a>
@@ -33,16 +50,41 @@
                 </button>
         
                 <div class="collapse navbar-collapse" id="ActualNavbar">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a href="http://www.vastumandala.in/the-office.html" class="text-dark nav-link">|   The Office</a></li>
-                        <li class="nav-item"><a href="http://www.vastumandala.in/projects.html" class="text-dark nav-link">|   Projects</a></li>
-                        <li class="nav-item"><a href="http://www.vastumandala.in/overview.html" class="text-dark nav-link">|   Overview</a></li>
-                        <li class="nav-item"><a href="http://www.vastumandala.in/contact.html" class="text-dark nav-link">|   Contact Us</a></li>
+                    <ul class="navbar-nav ml-auto nav-pills red">
+                        <li class="nav-item"><a href="#office" class="text-dark active nav-link">|   The Office</a></li>
+                        <li class="nav-item"><a href="#Projects" class="text-dark nav-link">|   Projects</a></li>
+                        <li class="nav-item"><a href="#Overview" class="text-dark nav-link">|   Overview</a></li>
+                        <li class="nav-item"><a href="#ContactUs" class="text-dark nav-link">|   Contact Us</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+    </div>
+        <div class="col-12">
+            <div class="bg-dark">
+                <div id="office" class="container bg-dark text-white text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a minima, eligendi eum, quia reiciendis magni perferendis cum nihil ipsa repellendus voluptatum corporis consequuntur laboriosam, quisquam dolor facilis excepturi deleniti.
+                </div>
+            </div>
+            <div class="bg-success">
+                <div id="Projects" class="container text-white bg-success text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a minima, eligendi eum, quia reiciendis magni perferendis cum nihil ipsa repellendus voluptatum corporis consequuntur laboriosam, quisquam dolor facilis excepturi deleniti.
+                </div>
+            </div>
+            <div class="bg-dark">
+                <div id="Overview" class="container bg-dark text-white text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a minima, eligendi eum, quia reiciendis magni perferendis cum nihil ipsa repellendus voluptatum corporis consequuntur laboriosam, quisquam dolor facilis excepturi deleniti.
+                </div>
+            </div>
+            <div class="bg-success">
+                <div id="ContactUs" class="container text-white bg-success text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a minima, eligendi eum, quia reiciendis magni perferendis cum nihil ipsa repellendus voluptatum corporis consequuntur laboriosam, quisquam dolor facilis excepturi deleniti.
+                </div>
+            </div>
+        </div>
     
-    
+    <script>
+
+    </script>
 </body>
 </html>
