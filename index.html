@@ -4,63 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vastumandala</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Vastumandala</title>
     <style>
-        body {
-            position: relative;
-            background-image: url('./bg.jpg');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        /*.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-            color: black;
-            background-color: #fcd900;
-        }
-    
-            .nav-pills > li.active > a:hover {
-                background-color: #efcb00;
-                color:black;
-            }*/
-            .nav-pills > li > a.active {
-            background-color: #000000!important;
-            color: white!important;
-            }
-            div.col-12 div {
+        .material div {
             height: 500px;
         }
     </style>
 </head>
-<body data-spy="scroll" data-target="#scrollspy">
-    <div>
-        <nav class="navbar navbar-expand-sm text-dark bg-white navbar-expand-md navbar-expand-lg fixed-top" id="scrollspy">
-            
-            <div class="container">
-                <a href="./index.html" class="navbar-brand"><div id="logo"><img src="./logo.gif" alt="Logo"></div></a>
-                <button class="navbar-toggler ml-auto btn-white" type="button" data-toggle="collapse" data-target="#ActualNavbar">
-                    <span class="navbar-toggler-icon">
-                            <i class="fas fa-bars"></i>
-                    </span>
-                </button>
-        
-                <div class="collapse navbar-collapse" id="ActualNavbar">
-                    <ul class="navbar-nav ml-auto nav-pills red">
-                        <li class="nav-item"><a href="#office" class="text-dark active nav-link">|   The Office</a></li>
-                        <li class="nav-item"><a href="#Projects" class="text-dark nav-link">|   Projects</a></li>
-                        <li class="nav-item"><a href="#Overview" class="text-dark nav-link">|   Overview</a></li>
-                        <li class="nav-item"><a href="#ContactUs" class="text-dark nav-link">|   Contact Us</a></li>
-                    </ul>
-                </div>
+<body>
+    <nav class="navbar navbar-expand-sm text-dark bg-white navbar-expand-md navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="./index1.html" class="navbar-brand"><div id="logo"><img src="./logo.gif" alt="Logo"></div></a>
+            <button class="navbar-toggler ml-auto btn-white" type="button" data-toggle="collapse" data-target="#ActualNavbar">
+                <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars"></i>
+                </span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="ActualNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#office" class="text-dark active nav-link">|   The Office</a></li>
+                    <li class="nav-item"><a href="#Projects" class="text-dark nav-link">|   Projects</a></li>
+                    <li class="nav-item"><a href="#Overview" class="text-dark nav-link">|   Overview</a></li>
+                    <li class="nav-item"><a href="#ContactUs" class="text-dark nav-link">|   Contact Us</a></li>
+                </ul>
             </div>
-        </nav>
-    </div>
-        <div class="col-12">
+        </div>
+    </nav>
+    <div class="material">
             <div class="bg-dark">
                 <div id="office" class="container bg-dark text-white text-center">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a minima, eligendi eum, quia reiciendis magni perferendis cum nihil ipsa repellendus voluptatum corporis consequuntur laboriosam, quisquam dolor facilis excepturi deleniti.
@@ -82,9 +58,17 @@
                 </div>
             </div>
         </div>
-    
-    <script>
-
-    </script>
+        <script>
+            $('.nav-link').click(function(event) {
+                var sectionTo = $(this).attr('href');
+                //$('.nav-link').click(function (event){
+                event.preventDefault();
+                //});
+                console.log($(sectionTo).offset().top)
+                $('html, body').animate({
+                    scrollTop: $(sectionTo).offset().top
+                }, 500);
+            });
+        </script>
 </body>
 </html>
