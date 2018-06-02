@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <title>Vastumandala</title>
     <style>
         .material div {
@@ -19,7 +20,7 @@
 <body>
     <nav class="navbar navbar-expand-sm text-dark bg-white navbar-expand-md navbar-expand-lg fixed-top">
         <div class="container">
-            <a href="./index1.html" class="navbar-brand"><div id="logo"><img src="./logo.gif" alt="Logo"></div></a>
+            <a href="./index.html" class="navbar-brand"><div id="logo"><img src="./logo.gif" alt="Logo"></div></a>
             <button class="navbar-toggler ml-auto btn-white" type="button" data-toggle="collapse" data-target="#ActualNavbar">
                 <span class="navbar-toggler-icon">
                         <i class="fas fa-bars"></i>
@@ -52,18 +53,45 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a minima, eligendi eum, quia reiciendis magni perferendis cum nihil ipsa repellendus voluptatum corporis consequuntur laboriosam, quisquam dolor facilis excepturi deleniti.
                 </div>
             </div>
-            <div class="bg-success">
-                <div id="ContactUs" class="container text-white bg-success text-center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a minima, eligendi eum, quia reiciendis magni perferendis cum nihil ipsa repellendus voluptatum corporis consequuntur laboriosam, quisquam dolor facilis excepturi deleniti.
+            <div style="background-color:#F5F5F5;">
+                <div id="ContactUs" class="text-dark" style="font-family:'Open Sans'; ">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <div class="col-md-8" style="font-size:150%; padding-top:1.5vw; padding-left:35%;">
+                                    <strong style="color:black">Headquarters</strong>
+                                    <p style="opacity:0.7; font-size:70%;">
+                                        Vastumadandala
+                                        <br>
+                                        S.C.O - 6, First Floor, Sector - 8
+                                        <br>
+                                        Karnal, Haryana 132001
+                                    </p>
+                                </div>
+                                <div class=" col-md-4" style="font-size:150%; padding-top:1.5vw;">
+                                    <strong style="color:black">General Contact</strong>
+                                    <p style="opacity:0.7; font-size:70%;">
+                                        Phone: 0184-2200492
+                                        <br>
+                                        Fax: 0184-2200492
+                                        <br>
+                                        Email: vastu86@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-5" style="background-image:url('map.png'); background-size:cover;">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <script>
             $('.nav-link').click(function(event) {
                 var sectionTo = $(this).attr('href');
-                //$('.nav-link').click(function (event){
                 event.preventDefault();
-                //});
                 console.log($(sectionTo).offset().top)
                 $('html, body').animate({
                     scrollTop: $(sectionTo).offset().top
